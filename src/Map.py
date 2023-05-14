@@ -49,10 +49,22 @@ class Map:
 
         if _type == TYPE.HARD:
             identity = [
-                [(-1, -1), (-1, 0), (-1, 1)],
+                [(-1, 0)],
                 [(0, -1), (0, 0), (0, 1)],
-                [(1, -1), (1, 0), (1, 1)]
+                [(1, 0)]
             ]
+
+            '''
+            caso deseje que os quadrados difíceis não se toquem de nenhuma maneira:
+            [(-1, -1), (-1, 0), (-1, 1)],
+            [(0, -1), (0, 0), (0, 1)],
+            [(1, -1), (1, 0), (1, 1)],
+
+            caso os quadrados difíceis possam se tocar nas diagonais:
+            [(-1, 0)],
+            [(0, -1), (0, 0), (0, 1)],
+            [(1, 0)],
+            '''
 
             for row in identity:
                 for current in row:
